@@ -18,16 +18,16 @@ function criarItens() {
     let itens = document.createElement('li');
     listOrd.appendChild(itens);
     itens.classList = "item"
-    itens.innerText = inputAdd.value
+    itens.innerText = inputAdd.value;
     inputAdd.value = ""
     listenerClick();
-    dblclick()
+    dblclick();
   })
 }
 
 criarItens();
 
-//Criando selected e background ao clicar nos itens 
+// Criando selected e background ao clicar nos itens 
 
 function listenerClick() {
   for (let i = 0; i < item.length; i++) {
@@ -58,7 +58,7 @@ function removeSelected() {
 function dblclick() {
   let itList = document.querySelectorAll(".item")
   for (let i = 0; i < itList.length; i++) {
-    itList[i].addEventListener("dblclick", completed)
+    itList[i].addEventListener("dblclick", completed);
   }
 
 }
@@ -67,7 +67,7 @@ function completed(e) {
   if (e.target.classList.contains("completed")) {
     e.target.classList.remove("completed")
   } else {
-    e.target.classList.add("completed")
+    e.target.classList.add("completed");
   }
 }
 
